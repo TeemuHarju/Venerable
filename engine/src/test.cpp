@@ -1,7 +1,7 @@
 #include "test.hpp"
 
-#include <stdio.h>
+#include <iostream>
 
 void print_int(i32 i) {
-    printf("The number is: %i", i);
+    std::cout << "The number is: " << i << std::endl;
 }
