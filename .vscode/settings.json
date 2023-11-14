@@ -29,7 +29,8 @@
 	"C_Cpp.vcFormat.space.removeAroundMemberOperators": false,
 	"C_Cpp.formatting": "vcFormat",
 	"files.associations": {
-		"xstring": "cpp"
+		"xstring": "cpp",
+		"stdarg.h": "c"
 	},
 	"todohighlight.keywords": [
 		{
