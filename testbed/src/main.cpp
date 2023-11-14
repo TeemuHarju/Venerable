@@ -1,5 +1,7 @@
-#include <test.hpp>
+#include <logger.hpp>
 
-int main() {
-	print_int(42);
+int main()
+{
+	logoutput("Test");
+	return 0;
 }

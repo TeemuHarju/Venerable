@@ -1,32 +1,36 @@
 {
-	"workbench.colorTheme": "Gruvbox Dark (Hard)",
-	"xmlTools.enforcePrettySelfClosingTagOnFormat": true,
-	"editor.minimap.enabled": false,
-	"terminal.integrated.shell.windows": "c:/Program Files/PowerShell/7/pwsh.exe",
-	"terminal.integrated.fontFamily": "Cascadia Mono PL",
-	"terminal.integrated.fontWeight": "1",
-	"editor.fontFamily": "Liberation Mono",
-	"editor.fontSize": 16,
-	"editor.fontWeight": "1",
-	"workbench.editor.showTabs": false,
-	"workbench.activityBar.visible": true,
-	"workbench.colorCustomizations": {
-		"editorCursor.foreground": "#00ff33",
-		"editor.lineHighlightBackground": "#111144"
-	},
-	"workbench.statusBar.visible": true,
+	"editor.detectIndentation": false,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
 	"editor.lineNumbers": "on",
 	"C_Cpp.clang_format_style": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0, NamespaceIndentation: All}",
-	"C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
-	"C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
-	"C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+	"editor.formatOnSave": true,
+	"C_Cpp.enhancedColorization": "enabled",
+	"C_Cpp.commentContinuationPatterns": [
+		"/**",
+		" * @brief ",
+		" */"
+	],
+	"C_Cpp.vcFormat.space.aroundAssignmentOperator": "ignore",
+	"C_Cpp.vcFormat.space.beforeBlockOpenBrace": true,
+	"C_Cpp.vcFormat.space.beforeInitializerListOpenBrace": true,
+	"C_Cpp.vcFormat.space.afterCastCloseParenthesis": true,
+	"C_Cpp.vcFormat.space.betweenEmptyParameterListParentheses": false,
+	"C_Cpp.vcFormat.space.betweenEmptyBraces": false,
+	"C_Cpp.vcFormat.space.betweenEmptySquareBrackets": false,
 	"C_Cpp.vcFormat.space.pointerReferenceAlignment": "left",
-	"C_Cpp.clang_format_sortIncludes": false,
-	"C_Cpp.vcFormat.indent.namespaceContents": true,
-	"editor.cursorStyle": "block",
-	"window.zoomLevel": 0,
-	"editor.tabCompletion": "on",
-	"todohighlight.isEnable": true,
+	"C_Cpp.vcFormat.space.withinCastParentheses": true,
+	"C_Cpp.vcFormat.space.withinControlFlowStatementParentheses": true,
+	"C_Cpp.vcFormat.space.withinExpressionParentheses": true,
+	"C_Cpp.vcFormat.space.withinLambdaBrackets": true,
+	"C_Cpp.vcFormat.space.withinParameterListParentheses": true,
+	"C_Cpp.vcFormat.space.withinSquareBrackets": true,
+	"C_Cpp.vcFormat.space.withinInitializerListBraces": true,
+	"C_Cpp.vcFormat.space.removeAroundMemberOperators": false,
+	"C_Cpp.formatting": "vcFormat",
+	"files.associations": {
+		"xstring": "cpp"
+	},
 	"todohighlight.keywords": [
 		{
 			"text": "TODO:",
@@ -43,22 +47,5 @@
 			"color": "green",
 			"backgroundColor": "rgba(0,0,0,0)"
 		}
-	],
-	"todohighlight.defaultStyle": {
-		"color": "red",
-		"backgroundColor": "#ffab00",
-		"overviewRulerColor": "rgba(0,0,0,0)",
-		"isWholeLine": false,
-	},
-	"files.associations": {
-		"test.h": "c",
-		"vulkan.h": "c",
-		"vulkan_core.h": "c",
-		"vk_platform.h": "c",
-		"type_traits": "c",
-		"typeinfo": "c",
-		"windowsx.h": "c",
-		"vulkan_platform.h": "c",
-		"renderer_frontend.h": "c"
-	}
+	]
 }

@@ -2,13 +2,13 @@ REM Build script for testbed
 @ECHO OFF
 SetLocal EnableDelayedExpansion
 
-REM Get a list of all the .cpp files.
-SET cppFilenames=
-FOR /R %%f in (*.cpp) do (
-	SET cppFilenames=!cppFilenames! %%f
+REM Get a list of all the .c files.
+SET cFilenames=
+FOR /R %%f in (*.c) do (
+    SET cFilenames=!cFilenames! %%f
 )
 
-REM echo "Files:" %cppFilenames%
+REM echo "Files:" %cFilenames%
 
 SET assembly=testbed
 SET compilerFlags=-g 
@@ -18,4 +18,4 @@ SET linkerFlags=-L../bin/ -lengine.lib
 SET defines=-D_DEBUG -DKIMPORT
 
 ECHO "Building %assembly%%..."
-clang++ %cppFilenames% %compilerFlags% -o ../bin/%assembly%.exe %defines% %includeFlags% %linkerFlags%
+clang %cFilenames% %compilerFlags% -o ../bin/%assembly%.exe %defines% %includeFlags% %linkerFlags%
