@@ -2,7 +2,7 @@
 #include "asserts.h"
 #include "platform/platform.h"
 
-#include <iostream>
+#include <stdio.h>
 #include <cstring>
 #include <cstdarg>
 
@@ -23,7 +23,7 @@ void log_output( log_level level, const char* message, ... ) {
 	// DON'T DO THAT!
 	const i32 msg_length = 32000;
 	char out_message[ msg_length ];
-	std::memset( out_message, 0, sizeof( out_message ) );
+	memset( out_message, 0, sizeof( out_message ) );
 
 	// Format original message.
 	// NOTE: Oddly enough, MS's headers override the GCC/Clang va_list type with a "typedef char* va_list" in some
@@ -31,11 +31,11 @@ void log_output( log_level level, const char* message, ... ) {
 	// which is the type GCC/Clang's va_start expects.
 	__builtin_va_list arg_ptr;
 	va_start( arg_ptr, message );
-	std::vsnprintf( out_message, msg_length, message, arg_ptr );
+	vsnprintf( out_message, msg_length, message, arg_ptr );
 	va_end( arg_ptr );
 
 	char out_message2[ msg_length ];
-	std::sprintf( out_message2, "%s%s\n", level_strings[ static_cast< i32 >( level ) ], out_message );
+	sprintf( out_message2, "%s%s\n", level_strings[ static_cast< i32 >( level ) ], out_message );
 
 	// Platform-specific output.
 	if ( is_error ) {
