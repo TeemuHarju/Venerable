@@ -11,7 +11,7 @@ typedef struct platform_state {
 } platform_state;
 
 /**
- * @fn VAPI bool platform_startup(platform_state* plat_state, const char* application_name, i32 x, i32 y, i32 width, i32 height)
+ * @fn bool platform_startup(platform_state* plat_state, const char* application_name, i32 x, i32 y, i32 width, i32 height)
  * @brief Initializes the platform.
  *
  * @param plat_state Pointer to the platform state structure.
@@ -22,7 +22,7 @@ typedef struct platform_state {
  * @param height Initial height of the window.
  * @return Boolean indicating whether the platform initialization was successful.
  */
-VAPI bool platform_startup(
+bool platform_startup(
 	platform_state* plat_state,
 	const char* application_name,
 	i32 x,
@@ -31,21 +31,21 @@ VAPI bool platform_startup(
 	i32 height );
 
 /**
- * @fn VAPI void platform_shutdown(platform_state* plat_state)
+ * @fn void platform_shutdown(platform_state* plat_state)
  * @brief Shuts down the platform.
  *
  * @param plat_state Pointer to the platform state structure.
  */
-VAPI void platform_shutdown( platform_state* plat_state );
+void platform_shutdown( platform_state* plat_state );
 
 /**
- * @fn VAPI bool platform_pump_messages(platform_state* plat_state)
+ * @fn bool platform_pump_messages(platform_state* plat_state)
  * @brief Processes platform-specific messages.
  *
  * @param plat_state Pointer to the platform state structure.
  * @return Boolean indicating whether there are more messages to process.
  */
-VAPI bool platform_pump_messages( platform_state* plat_state );
+bool platform_pump_messages( platform_state* plat_state );
 
 /**
  * @fn void* platform_allocate(u64 size, b8 aligned)
@@ -55,7 +55,7 @@ VAPI bool platform_pump_messages( platform_state* plat_state );
  * @param aligned Boolean indicating whether the memory should be aligned.
  * @return Pointer to the allocated memory.
  */
-void* platform_allocate( u64 size, b8 aligned );
+VAPI void* platform_allocate( u64 size, b8 aligned );
 
 /**
  * @fn void platform_free(void* block, b8 aligned)
