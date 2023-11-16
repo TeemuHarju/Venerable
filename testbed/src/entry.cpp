@@ -7,7 +7,7 @@
 #include <core/vmemory.h>
 
 // Define the function to create a game
-bool create_game( game* out_game ) {
+b8 create_game( game* out_game ) {
 
 	// Application configuration.
 	out_game->app_config.start_pos_x = 100;
@@ -23,5 +23,5 @@ bool create_game( game* out_game ) {
 	// Create the game state.
 	out_game->state = kallocate( sizeof( game_state ), MEMORY_TAG_GAME );
 
-	return true;
+	return TRUE;
 }

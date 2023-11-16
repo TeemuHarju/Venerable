@@ -7,7 +7,7 @@
 #include "game_types.h"
 
 // Externally-defined function to create a game.
-extern bool create_game( game* out_game );
+extern b8 create_game( game* out_game );
 
 /**
  * The main entry point of the application.

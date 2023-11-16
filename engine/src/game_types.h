@@ -15,7 +15,7 @@ typedef struct game {
 	 * @param game_inst Pointer to the game structure.
 	 * @return true if initialization is successful, false otherwise.
 	 */
-	bool ( *initialize )( struct game* game_inst );
+	b8 ( *initialize )( struct game* game_inst );
 
 	/**
 	 * @brief Function pointer to the game's update function.
@@ -24,7 +24,7 @@ typedef struct game {
 	 * @param delta_time Time elapsed since the last update.
 	 * @return true if update is successful, false otherwise.
 	 */
-	bool ( *update )( struct game* game_inst, f32 delta_time );
+	b8 ( *update )( struct game* game_inst, f32 delta_time );
 
 	/**
 	 * @brief Function pointer to the game's render function.
@@ -33,7 +33,7 @@ typedef struct game {
 	 * @param delta_time Time elapsed since the last render.
 	 * @return true if rendering is successful, false otherwise.
 	 */
-	bool ( *render )( struct game* game_inst, f32 delta_time );
+	b8 ( *render )( struct game* game_inst, f32 delta_time );
 
 	/**
 	 * @brief Function pointer to handle resizes, if applicable.

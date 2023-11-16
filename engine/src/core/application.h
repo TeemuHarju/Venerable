@@ -24,11 +24,11 @@ typedef struct application_config {
  * @param game_inst Pointer to the game structure.
  * @return true if the application creation is successful, false otherwise.
  */
-VAPI bool application_create( struct game* game_inst );
+VAPI b8 application_create( struct game* game_inst );
 
 /**
  * @brief Runs the application.
  *
  * @return true if the application runs successfully, false otherwise.
  */
-VAPI bool application_run();
+VAPI b8 application_run();

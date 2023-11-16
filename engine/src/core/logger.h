@@ -17,22 +17,22 @@
  * @enum log_level
  * @brief Enumeration representing different log levels.
  */
-enum class log_level {
+typedef enum log_level {
 	LOG_LEVEL_FATAL = 0, /**< Fatal error log level. */
 	LOG_LEVEL_ERROR = 1, /**< Error log level. */
 	LOG_LEVEL_WARN = 2,  /**< Warning log level. */
 	LOG_LEVEL_INFO = 3,  /**< Information log level. */
 	LOG_LEVEL_DEBUG = 4, /**< Debug log level. */
 	LOG_LEVEL_TRACE = 5  /**< Trace log level. */
-};
+} log_level;
 
 /**
- * @fn bool initialize_logging()
+ * @fn b8 initialize_logging()
  * @brief Initializes the logging system.
  *
  * @return Boolean indicating whether the logging initialization was successful.
  */
-bool initialize_logging();
+b8 initialize_logging();
 
 /**
  * @fn void shutdown_logging()

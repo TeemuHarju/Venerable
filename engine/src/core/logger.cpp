@@ -6,9 +6,9 @@
 #include <cstring>
 #include <cstdarg>
 
-bool initialize_logging() {
+b8 initialize_logging() {
 	// TODO: create log file.
-	return true;
+	return TRUE;
 }
 
 void shutdown_logging() {
