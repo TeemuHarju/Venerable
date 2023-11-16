@@ -2,7 +2,7 @@
 
 #include <entry.h>
 
-#include <core/kmemory.h>
+#include <core/vmemory.h>
 
 // Define the function to create a game
 b8 create_game( game* out_game ) {
