@@ -22,7 +22,7 @@
  * @param file File where the assertion failure occurred.
  * @param line Line number in the file where the assertion failure occurred.
  */
-VAPI void report_assertion_failure(const char* expression, const char* message, const char* file, i32 line);
+VAPI void report_assertion_failure( const char* expression, const char* message, const char* file, i32 line );
 
 #define KASSERT(expr)                                                \
     {                                                                \

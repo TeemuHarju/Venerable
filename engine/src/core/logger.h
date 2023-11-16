@@ -48,7 +48,7 @@ void shutdown_logging();
  * @param message Format string for the log message.
  * @param ... Additional arguments for the format string.
  */
-VAPI void log_output(log_level level, const char* message, ...);
+VAPI void log_output( log_level level, const char* message, ... );
 // Logs a fatal-level message.
 #define KFATAL(message, ...) log_output(LOG_LEVEL_FATAL, message, ##__VA_ARGS__);
 

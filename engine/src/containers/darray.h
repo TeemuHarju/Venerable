@@ -11,10 +11,10 @@ void* elements
 */
 
 enum {
-    DARRAY_CAPACITY,
-    DARRAY_LENGTH,
-    DARRAY_STRIDE,
-    DARRAY_FIELD_LENGTH
+	DARRAY_CAPACITY,
+	DARRAY_LENGTH,
+	DARRAY_STRIDE,
+	DARRAY_FIELD_LENGTH
 };
 
 VAPI void* _darray_create( u64 length, u64 stride );
@@ -77,4 +77,3 @@ VAPI void* _darray_insert_at( void* array, u64 index, void* value_ptr );
 
 #define darray_length_set(array, value) \
     _darray_field_set(array, DARRAY_LENGTH, value)
-    
