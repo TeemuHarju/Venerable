@@ -13,6 +13,15 @@
 #define debugBreak() __builtin_trap()
 #endif
 
+/**
+ * @fn VAPI void report_assertion_failure(const char* expression, const char* message, const char* file, i32 line)
+ * @brief Reports an assertion failure.
+ *
+ * @param expression Expression that failed.
+ * @param message Additional message describing the assertion failure.
+ * @param file File where the assertion failure occurred.
+ * @param line Line number in the file where the assertion failure occurred.
+ */
 VAPI void report_assertion_failure( const char* expression, const char* message, const char* file, i32 line );
 
 #define KASSERT(expr)                                                \

@@ -13,18 +13,41 @@
 #define LOG_TRACE_ENABLED 0
 #endif
 
+/**
+ * @enum log_level
+ * @brief Enumeration representing different log levels.
+ */
 enum class log_level {
-	LOG_LEVEL_FATAL = 0,
-	LOG_LEVEL_ERROR = 1,
-	LOG_LEVEL_WARN = 2,
-	LOG_LEVEL_INFO = 3,
-	LOG_LEVEL_DEBUG = 4,
-	LOG_LEVEL_TRACE = 5
+	LOG_LEVEL_FATAL = 0, /**< Fatal error log level. */
+	LOG_LEVEL_ERROR = 1, /**< Error log level. */
+	LOG_LEVEL_WARN = 2,  /**< Warning log level. */
+	LOG_LEVEL_INFO = 3,  /**< Information log level. */
+	LOG_LEVEL_DEBUG = 4, /**< Debug log level. */
+	LOG_LEVEL_TRACE = 5  /**< Trace log level. */
 };
 
+/**
+ * @fn bool initialize_logging()
+ * @brief Initializes the logging system.
+ *
+ * @return Boolean indicating whether the logging initialization was successful.
+ */
 bool initialize_logging();
+
+/**
+ * @fn void shutdown_logging()
+ * @brief Shuts down the logging system.
+ */
 void shutdown_logging();
 
+/**
+ * @fn VAPI void log_output(log_level level, const char* message, ...)
+ * @brief Logs a message with the specified log level.
+ *
+ * @param level Log level of the message.
+ * @param message Format string for the log message.
+ * @param ... Additional arguments for the format string.
+ */
 VAPI void log_output( log_level level, const char* message, ... );
 
 // Logs a fatal-level message.
