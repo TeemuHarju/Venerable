@@ -48,27 +48,26 @@ void shutdown_logging();
  * @param message Format string for the log message.
  * @param ... Additional arguments for the format string.
  */
-VAPI void log_output( log_level level, const char* message, ... );
-
+VAPI void log_output(log_level level, const char* message, ...);
 // Logs a fatal-level message.
-#define KFATAL(message, ...) log_output(log_level::LOG_LEVEL_FATAL, message, ##__VA_ARGS__);
+#define KFATAL(message, ...) log_output(LOG_LEVEL_FATAL, message, ##__VA_ARGS__);
 
 #ifndef KERROR
 // Logs an error-level message.
-#define KERROR(message, ...) log_output(log_level::LOG_LEVEL_ERROR, message, ##__VA_ARGS__);
+#define KERROR(message, ...) log_output(LOG_LEVEL_ERROR, message, ##__VA_ARGS__);
 #endif
 
 #if LOG_WARN_ENABLED == 1
 // Logs a warning-level message.
-#define KWARN(message, ...) log_output(log_level::LOG_LEVEL_WARN, message, ##__VA_ARGS__);
+#define KWARN(message, ...) log_output(LOG_LEVEL_WARN, message, ##__VA_ARGS__);
 #else
 // Does nothing when LOG_WARN_ENABLED != 1
 #define KWARN(message, ...)
 #endif
 
 #if LOG_INFO_ENABLED == 1
-// Logs an info-level message.
-#define KINFO(message, ...) log_output(log_level::LOG_LEVEL_INFO, message, ##__VA_ARGS__);
+// Logs a info-level message.
+#define KINFO(message, ...) log_output(LOG_LEVEL_INFO, message, ##__VA_ARGS__);
 #else
 // Does nothing when LOG_INFO_ENABLED != 1
 #define KINFO(message, ...)
@@ -76,7 +75,7 @@ VAPI void log_output( log_level level, const char* message, ... );
 
 #if LOG_DEBUG_ENABLED == 1
 // Logs a debug-level message.
-#define KDEBUG(message, ...) log_output(log_level::LOG_LEVEL_DEBUG, message, ##__VA_ARGS__);
+#define KDEBUG(message, ...) log_output(LOG_LEVEL_DEBUG, message, ##__VA_ARGS__);
 #else
 // Does nothing when LOG_DEBUG_ENABLED != 1
 #define KDEBUG(message, ...)
@@ -84,7 +83,7 @@ VAPI void log_output( log_level level, const char* message, ... );
 
 #if LOG_TRACE_ENABLED == 1
 // Logs a trace-level message.
-#define KTRACE(message, ...) log_output(log_level::LOG_LEVEL_TRACE, message, ##__VA_ARGS__);
+#define KTRACE(message, ...) log_output(LOG_LEVEL_TRACE, message, ##__VA_ARGS__);
 #else
 // Does nothing when LOG_TRACE_ENABLED != 1
 #define KTRACE(message, ...)
