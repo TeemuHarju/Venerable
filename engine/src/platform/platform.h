@@ -22,7 +22,7 @@ typedef struct platform_state {
  * @param height Initial height of the window.
  * @return Boolean indicating whether the platform initialization was successful.
  */
-VAPI b8 platform_startup(
+VAPI bool platform_startup(
 	platform_state* plat_state,
 	const char* application_name,
 	i32 x,

@@ -20,7 +20,7 @@ static LARGE_INTEGER start_time;
 
 LRESULT CALLBACK win32_process_message( HWND hwnd, u32 msg, WPARAM w_param, LPARAM l_param );
 
-b8 platform_startup(
+bool platform_startup(
 	platform_state* plat_state,
 	const char* application_name,
 	i32 x,
@@ -48,7 +48,7 @@ b8 platform_startup(
 
 	if ( !RegisterClassA( &wc ) ) {
 		MessageBoxA( 0, "Window registration failed", "Error", MB_ICONEXCLAMATION | MB_OK );
-		return FALSE;
+		return false;
 	}
 
 	// Create window
@@ -90,7 +90,7 @@ b8 platform_startup(
 		MessageBoxA( NULL, "Window creation failed!", "Error!", MB_ICONEXCLAMATION | MB_OK );
 
 		KFATAL( "Window creation failed!" );
-		return FALSE;
+		return false;
 	}
 	else {
 		state->hwnd = handle;
@@ -109,7 +109,7 @@ b8 platform_startup(
 	clock_frequency = 1.0 / ( f64 ) frequency.QuadPart;
 	QueryPerformanceCounter( &start_time );
 
-	return TRUE;
+	return true;
 }
 
 void platform_shutdown( platform_state* plat_state ) {
