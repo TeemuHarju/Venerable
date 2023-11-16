@@ -17,11 +17,11 @@ void shutdown_logging() {
 
 void log_output( log_level level, const char* message, ... ) {
 	const char* level_strings[ 6 ] = { "[FATAL]: ", "[ERROR]: ", "[WARN]:  ", "[INFO]:  ", "[DEBUG]: ", "[TRACE]: " };
-	bool is_error = static_cast< int >( level ) < static_cast< int >( log_level::LOG_LEVEL_WARN );
+	bool is_error = static_cast< i32 >( level ) < static_cast< i32 >( log_level::LOG_LEVEL_WARN );
 
 	// Technically imposes a 32k character limit on a single log entry, but...
 	// DON'T DO THAT!
-	const int msg_length = 32000;
+	const i32 msg_length = 32000;
 	char out_message[ msg_length ];
 	std::memset( out_message, 0, sizeof( out_message ) );
 
@@ -35,17 +35,17 @@ void log_output( log_level level, const char* message, ... ) {
 	va_end( arg_ptr );
 
 	char out_message2[ msg_length ];
-	std::sprintf( out_message2, "%s%s\n", level_strings[ static_cast< int >( level ) ], out_message );
+	std::sprintf( out_message2, "%s%s\n", level_strings[ static_cast< i32 >( level ) ], out_message );
 
 	// Platform-specific output.
 	if ( is_error ) {
-		platform_console_write_error( out_message2, static_cast< int >( level ) );
+		platform_console_write_error( out_message2, static_cast< i32 >( level ) );
 	}
 	else {
-		platform_console_write( out_message2, static_cast< int >( level ) );
+		platform_console_write( out_message2, static_cast< i32 >( level ) );
 	}
 }
 
-void report_assertion_failure( const char* expression, const char* message, const char* file, int line ) {
+void report_assertion_failure( const char* expression, const char* message, const char* file, i32 line ) {
 	log_output( log_level::LOG_LEVEL_FATAL, "Assertion Failure: %s, message: '%s', in file: %s, line: %d\n", expression, message, file, line );
 }
