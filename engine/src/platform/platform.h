@@ -39,13 +39,13 @@ VAPI b8 platform_startup(
 VAPI void platform_shutdown( platform_state* plat_state );
 
 /**
- * @fn VAPI b8 platform_pump_messages(platform_state* plat_state)
+ * @fn VAPI bool platform_pump_messages(platform_state* plat_state)
  * @brief Processes platform-specific messages.
  *
  * @param plat_state Pointer to the platform state structure.
  * @return Boolean indicating whether there are more messages to process.
  */
-VAPI b8 platform_pump_messages( platform_state* plat_state );
+VAPI bool platform_pump_messages( platform_state* plat_state );
 
 /**
  * @fn void* platform_allocate(u64 size, b8 aligned)

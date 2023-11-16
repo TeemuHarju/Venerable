@@ -122,7 +122,7 @@ void platform_shutdown( platform_state* plat_state ) {
 	}
 }
 
-b8 platform_pump_messages( platform_state* plat_state ) {
+bool platform_pump_messages( platform_state* plat_state ) {
 	MSG message;
 	while ( PeekMessageA( &message, NULL, 0, 0, PM_REMOVE ) ) {
 		TranslateMessage( &message );
