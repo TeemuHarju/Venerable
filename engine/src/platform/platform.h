@@ -48,23 +48,23 @@ void platform_shutdown( platform_state* plat_state );
 bool platform_pump_messages( platform_state* plat_state );
 
 /**
- * @fn void* platform_allocate(u64 size, b8 aligned)
+ * @fn void* platform_allocate(u64 size, bool aligned)
  * @brief Allocates memory.
  *
  * @param size Size of the memory to allocate.
  * @param aligned Boolean indicating whether the memory should be aligned.
  * @return Pointer to the allocated memory.
  */
-VAPI void* platform_allocate( u64 size, b8 aligned );
+void* platform_allocate( u64 size, bool aligned );
 
 /**
- * @fn void platform_free(void* block, b8 aligned)
+ * @fn void platform_free(void* block, bool aligned)
  * @brief Frees memory.
  *
  * @param block Pointer to the memory block to free.
  * @param aligned Boolean indicating whether the memory was aligned.
  */
-void platform_free( void* block, b8 aligned );
+void platform_free( void* block, bool aligned );
 
 /**
  * @fn void* platform_zero_memory(void* block, u64 size)

@@ -132,11 +132,11 @@ bool platform_pump_messages( platform_state* plat_state ) {
 	return TRUE;
 }
 
-void* platform_allocate( u64 size, b8 aligned ) {
+void* platform_allocate( u64 size, bool aligned ) {
 	return malloc( size );
 }
 
-void platform_free( void* block, b8 aligned ) {
+void platform_free( void* block, bool aligned ) {
 	free( block );
 }
 
