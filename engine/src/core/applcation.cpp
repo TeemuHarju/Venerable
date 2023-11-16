@@ -54,7 +54,7 @@ bool application_create( game* game_inst ) {
 	// Initialize the game.
 	if ( !app_state.game_inst->initialize( app_state.game_inst ) ) {
 		KFATAL( "Game failed to initialize." );
-		return FALSE;
+		return false;
 	}
 
 	app_state.game_inst->on_resize( app_state.game_inst, app_state.width, app_state.height );
@@ -75,7 +75,7 @@ bool application_run() {
 		if ( !app_state.is_suspended ) {
 			if ( !app_state.game_inst->update( app_state.game_inst, ( f32 ) 0 ) ) {
 				KFATAL( "Game update failed, shutting down." );
-				app_state.is_running = FALSE;
+				app_state.is_running = false;
 				break;
 			}
 
