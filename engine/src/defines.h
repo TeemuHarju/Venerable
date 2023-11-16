@@ -82,18 +82,18 @@ STATIC_ASSERT( sizeof( f64 ) == 8, "Expected f64 to be 8 bytes." );
 #error "Unknown platform!"
 #endif
 
-#ifdef KEXPORT
+#ifdef VEXPORT
 // Exports
 #ifdef _MSC_VER
-#define KAPI __declspec(dllexport)
+#define VAPI __declspec(dllexport)
 #else
-#define KAPI __attribute__((visibility("default")))
+#define VAPI __attribute__((visibility("default")))
 #endif
 #else
 // Imports
 #ifdef _MSC_VER
-#define KAPI __declspec(dllimport)
+#define VAPI __declspec(dllimport)
 #else
-#define KAPI
+#define VAPI
 #endif
 #endif
