@@ -4,7 +4,7 @@
 #include "logger.h"
 
 #include "platform/platform.h"
-#include "core/kmemory.h"
+#include "core/vmemory.h"
 #include "core/event.h"
 
 typedef struct application_state {
