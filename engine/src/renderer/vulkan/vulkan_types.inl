@@ -32,6 +32,11 @@ typedef struct vulkan_device {
 	i32 graphics_queue_index;                      /**< Index of the graphics queue. */
 	i32 present_queue_index;                       /**< Index of the presentation queue. */
 	i32 transfer_queue_index;                      /**< Index of the transfer queue. */
+
+	VkQueue graphics_queue;
+	VkQueue present_queue;
+	VkQueue transfer_queue;
+
 	VkPhysicalDeviceProperties properties;          /**< Physical device properties. */
 	VkPhysicalDeviceFeatures features;              /**< Physical device features. */
 	VkPhysicalDeviceMemoryProperties memory;        /**< Physical device memory properties. */
