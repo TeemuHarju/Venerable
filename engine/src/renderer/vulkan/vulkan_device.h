@@ -28,3 +28,12 @@ void vulkan_device_query_swapchain_support(
 	VkPhysicalDevice physical_device,
 	VkSurfaceKHR surface,
 	vulkan_swapchain_support_info* out_support_info );
+
+/**
+ * @brief Detects a suitable depth format for the Vulkan device.
+ *
+ * @param device The Vulkan device.
+ * @return True if a suitable depth format is detected, false otherwise.
+ */
+b8 vulkan_device_detect_depth_format( vulkan_device* device );
+
