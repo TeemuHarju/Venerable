@@ -26,6 +26,11 @@
 #include <stdio.h>
 #include <string.h>
 
+// For surface creation
+#define VK_USE_PLATFORM_XCB_KHR
+#include <vulkan/vulkan.h>
+#include "renderer/vulkan/vulkan_types.inl"
+
 typedef struct internal_state {
 	Display* display;
 	xcb_connection_t* connection;
@@ -33,6 +38,7 @@ typedef struct internal_state {
 	xcb_screen_t* screen;
 	xcb_atom_t wm_protocols;
 	xcb_atom_t wm_delete_win;
+	VkSurfaceKHR surface;
 } internal_state;
 
 // Key translation
