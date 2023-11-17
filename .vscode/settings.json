@@ -30,7 +30,11 @@
 	"C_Cpp.formatting": "vcFormat",
 	"files.associations": {
 		"xstring": "cpp",
-		"stdarg.h": "c"
+		"stdarg.h": "c",
+		"vmemory.h": "c",
+		"vulkan.h": "c",
+		"vstring.h": "c",
+		"vulkan_types.inl": "c"
 	},
 	"todohighlight.keywords": [
 		{

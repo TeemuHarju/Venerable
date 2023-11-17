@@ -18,3 +18,12 @@ VAPI u64 string_length( const char* str );
  *         The caller is responsible for freeing the memory.
  */
 VAPI char* string_duplicate( const char* str );
+
+/**
+ * @brief Performs a case-sensitive string comparison.
+ *
+ * @param str0 The first string to compare.
+ * @param str1 The second string to compare.
+ * @return True if the strings are equal, false otherwise.
+ */
+VAPI b8 strings_equal( const char* str0, const char* str1 );
